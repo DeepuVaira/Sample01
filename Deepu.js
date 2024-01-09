@@ -1,29 +1,33 @@
 class Solution {
-    longestCommonPrefix(arr,n){ 
-
-        
+    frequencyCount(arr, N, P) {
         //code here
-       if(n > 1){
-       let value = arr.map((item)=> item.length)
-       console.log(value)
+        let temp = {};
 
-       let ismall = Math.min(...value);
-       console.log(i)
+     
+            for (let i = 1; i <= N; i++) {
+                temp[i]=0
+                for (let j = 0; j <= N; j++) {
+                    if (arr[j] == i) {
+                        //temp[key]=val
+                        temp[i] += 1;
+                    }
+                }
 
-       for(let i=ismall; i<=0; i--){
-        if( arr[0].substr(0,i) && arr[1] ){}
-       }
-       
-       }
-       return ""
+            }
+
+            console.log(temp)
+
+            let temp1=[];
+
+            for (let item in temp){
+                temp1.push(temp[item])
+            }
+
+            return temp1;
+
+
     }
-
-    
 }
 
-
-
 let obj = new Solution();
-
-console.log(obj.longestCommonPrefix(["geeksforgeeks", "geeks", "geek",
-    "geezer"],4))
+console.log(obj.frequencyCount([8,9],2,3))
