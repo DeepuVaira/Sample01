@@ -11,7 +11,7 @@ class Solution {
        console.log(i)
 
        for(let i=ismall; i<=0; i--){
-        if( arr[0].substr(0,i) && arr[1] )
+        if( arr[0].substr(0,i) && arr[1] ){}
        }
        
        }
